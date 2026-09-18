@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Liberation War Archive - Gallery</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Liberation War Archive
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="documents.html">
+                        Documents
+                    </a>
+                </li>
+
+                <li>
+                    <a href="interviews.html">
+                        Interviews
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html" class="active">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Historical Photo Gallery
+        </h1>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img src="war1.jpg"
+                     alt="Liberation War Photo"
+                     onclick="openImage('war1.jpg')">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="war2.jpg"
+                     alt="Liberation War Photo"
+                     onclick="openImage('war2.jpg')">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="war3.jpg"
+                     alt="Liberation War Photo"
+                     onclick="openImage('war3.jpg')">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="war4.jpg"
+                     alt="Liberation War Photo"
+                     onclick="openImage('war4.jpg')">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= IMAGE MODAL ================= -->
+
+    <div id="imageModal"
+         class="modal"
+         onclick="closeImage()">
+
+        <span class="close">
+            &times;
+        </span>
+
+        <img id="largeImage"
+             src=""
+             alt="Large Historical Image"
+             onclick="event.stopPropagation()">
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Liberation War Archive
+        </p>
+
+        <p>
+            Preserving History for Future Generations
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT LINK -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

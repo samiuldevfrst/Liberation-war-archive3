@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #006a4e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #e31b23;
+}
+
+.hero {
+    height: 500px;
+    background-image:
+        linear-gradient(
+            rgba(0, 106, 78, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e31b23;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b80f16;
+}
+
+.intro {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    color: #006a4e;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #006a4e;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #006a4e;
+    margin-bottom: 10px;
+}
+
+.filter-box {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#documentFilter {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.document-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.document-card:hover {
+    transform: translateY(-5px);
+}
+
+.document-card h3 {
+    color: #006a4e;
+    margin-bottom: 10px;
+}
+
+.document-card p {
+    margin-bottom: 15px;
+}
+
+.interview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.interview-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.interview-card h3 {
+    color: #006a4e;
+    margin-bottom: 15px;
+}
+
+.interview-card audio,
+.interview-card video {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #006a4e;
+    outline: none;
+}
+
+footer {
+    background-color: #006a4e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .document-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .interview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .document-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+}

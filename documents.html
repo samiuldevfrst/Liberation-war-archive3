@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Liberation War Archive - Documents</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Liberation War Archive
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="documents.html" class="active">
+                        Documents
+                    </a>
+                </li>
+
+                <li>
+                    <a href="interviews.html">
+                        Interviews
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= DOCUMENT SECTION ================= -->
+
+    <section class="section">
+
+        <h1 class="section-title">
+            Historical Documents
+        </h1>
+
+
+        <!-- FILTER -->
+
+        <div class="filter-box">
+
+            <select id="documentFilter"
+                    onchange="filterDocuments()">
+
+                <option value="all">
+                    All Documents
+                </option>
+
+                <option value="letter">
+                    Letters
+                </option>
+
+                <option value="newspaper">
+                    Newspapers
+                </option>
+
+                <option value="photo">
+                    Photographs
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- DOCUMENT CARDS -->
+
+        <div class="document-grid">
+
+
+            <div class="document-card"
+                 data-type="letter">
+
+                <h3>
+                    Freedom Fighter Letter
+                </h3>
+
+                <p>
+                    A historical letter written during
+                    the Liberation War.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('Freedom Fighter Letter')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <div class="document-card"
+                 data-type="newspaper">
+
+                <h3>
+                    War Time Newspaper
+                </h3>
+
+                <p>
+                    A newspaper containing important
+                    wartime information.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('War Time Newspaper')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <div class="document-card"
+                 data-type="photo">
+
+                <h3>
+                    Historical Photograph
+                </h3>
+
+                <p>
+                    A photograph preserving an important
+                    moment of history.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('Historical Photograph')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <div class="document-card"
+                 data-type="letter">
+
+                <h3>
+                    Personal War Letter
+                </h3>
+
+                <p>
+                    A personal letter describing experiences
+                    during the war.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('Personal War Letter')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <div class="document-card"
+                 data-type="newspaper">
+
+                <h3>
+                    Liberation Newspaper
+                </h3>
+
+                <p>
+                    Historical newspaper related to the
+                    Liberation War.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('Liberation Newspaper')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+            <div class="document-card"
+                 data-type="photo">
+
+                <h3>
+                    Freedom Fighter Photo
+                </h3>
+
+                <p>
+                    Historical photograph of a freedom fighter.
+                </p>
+
+                <button class="btn"
+                        onclick="showDocument('Freedom Fighter Photo')">
+
+                    View Details
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Liberation War Archive
+        </p>
+
+        <p>
+            Preserving History for Future Generations
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT LINK -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
